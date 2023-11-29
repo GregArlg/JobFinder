@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JobFinder"
         mc:Ignorable="d"
-        Title="MainWindow" WindowStyle="None" d:DesignHeight="391.96" d:DesignWidth="875.257" MinWidth="960" MinHeight="540" ResizeMode="NoResize" WindowState="Maximized">
+        Title="MainWindow" WindowStyle="None" d:DesignHeight="391.96" d:DesignWidth="875.257" MinWidth="960" MinHeight="540" ResizeMode="NoResize" WindowState="Maximized" WindowStartupLocation="CenterScreen">
     <ContentControl x:Name="MainContentControl" Content=""/>
 </Window>

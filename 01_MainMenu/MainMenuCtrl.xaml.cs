@@ -27,6 +27,8 @@ namespace JobFinder._01_MainMenu
         {
             InitializeComponent();
 
+            MainGrid.Opacity = 0;
+
             DoubleAnimation anim = new DoubleAnimation
             {
                 From = 0,

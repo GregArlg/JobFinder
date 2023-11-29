@@ -11,6 +11,7 @@
     <None Remove="00_Intro\Medias\faux.png" />
     <None Remove="00_Intro\Medias\UE.jpg" />
     <None Remove="01_MainMenu\Medias\black.png" />
+    <None Remove="01_MainMenu\Medias\Title.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="01_MainMenu\Medias\black.png" />
+    <Resource Include="01_MainMenu\Medias\Title.png" />
   </ItemGroup>
 
 </Project>
