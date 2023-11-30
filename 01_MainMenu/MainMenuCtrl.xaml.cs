@@ -33,7 +33,7 @@ namespace JobFinder._01_MainMenu
             {
                 From = 0,
                 To = 1,
-                Duration = new Duration(TimeSpan.FromSeconds(5)),
+                Duration = new Duration(TimeSpan.FromSeconds(3)),
                 AutoReverse = false,
                 BeginTime = TimeSpan.FromSeconds(2)
             };

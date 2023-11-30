@@ -18,5 +18,22 @@
             </Grid.ColumnDefinitions>
             <Image x:Name="TitleImg" Grid.Column="1" Source="/01_MainMenu/Medias/Title.png" Stretch="Fill"/>
         </Grid>
+        <Grid x:Name="ContentGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name="LocationCB" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="244"/>
+            <Label Content="Location:" HorizontalAlignment="Left" Margin="118,116,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+            <ComboBox x:Name="SalaryCB" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="244"/>
+            <Label Content="Salary:" HorizontalAlignment="Left" Margin="118,266,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+            <ComboBox x:Name="ContractCB" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" Width="244"/>
+            <Label Content="Contract:" HorizontalAlignment="Left" Margin="118,416,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+            <ComboBox x:Name="ContractCB_Copy" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Top" Width="244"/>
+            <Label Content="Experience" HorizontalAlignment="Left" Margin="118,566,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+            <GridSplitter Width="5" ResizeDirection="Columns" Background="#FF333333"/>
+            <Grid x:Name="JobsGrid" Grid.Column="1" Margin="100,50,100,50"/>
+        </Grid>
+        <GridSplitter ResizeDirection="Rows" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="5" Background="#FF333333"/>
     </Grid>
 </UserControl>

@@ -11,6 +11,11 @@
     <None Remove="00_Intro\Medias\faux.png" />
     <None Remove="00_Intro\Medias\UE.jpg" />
     <None Remove="01_MainMenu\Medias\black.png" />
+    <None Remove="01_MainMenu\Medias\Company.png" />
+    <None Remove="01_MainMenu\Medias\Contract.png" />
+    <None Remove="01_MainMenu\Medias\Exp.png" />
+    <None Remove="01_MainMenu\Medias\Location.png" />
+    <None Remove="01_MainMenu\Medias\Salary.png" />
     <None Remove="01_MainMenu\Medias\Title.png" />
   </ItemGroup>
 
@@ -22,6 +27,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="01_MainMenu\Medias\black.png" />
+    <Resource Include="01_MainMenu\Medias\Company.png" />
+    <Resource Include="01_MainMenu\Medias\Contract.png" />
+    <Resource Include="01_MainMenu\Medias\Exp.png" />
+    <Resource Include="01_MainMenu\Medias\Location.png" />
+    <Resource Include="01_MainMenu\Medias\Salary.png" />
     <Resource Include="01_MainMenu\Medias\Title.png" />
   </ItemGroup>
 
