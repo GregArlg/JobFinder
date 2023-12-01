@@ -29,10 +29,12 @@
             <Label Content="Salary:" HorizontalAlignment="Left" Margin="118,266,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
             <ComboBox x:Name="ContractCB" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" Width="244"/>
             <Label Content="Contract:" HorizontalAlignment="Left" Margin="118,416,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
-            <ComboBox x:Name="ContractCB_Copy" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Top" Width="244"/>
+            <ComboBox x:Name="ExperienceCB" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Top" Width="244"/>
             <Label Content="Experience" HorizontalAlignment="Left" Margin="118,566,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
             <GridSplitter Width="5" ResizeDirection="Columns" Background="#FF333333"/>
-            <Grid x:Name="JobsGrid" Grid.Column="1" Margin="100,50,100,50"/>
+            <ScrollViewer Grid.Column="1" Margin="200,50,200,50">
+                <Grid x:Name="JobsGrid" Grid.Column="1"/>
+            </ScrollViewer>
         </Grid>
         <GridSplitter ResizeDirection="Rows" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="5" Background="#FF333333"/>
     </Grid>

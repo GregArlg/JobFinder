@@ -14,10 +14,10 @@
         <Label x:Name="Contract" Content="Contract" HorizontalAlignment="Left" Margin="460,70,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="Experience" Content="Experience" HorizontalAlignment="Left" Margin="260,120,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label x:Name="Company" Content="Company" HorizontalAlignment="Left" Margin="60,70,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Image Margin="30,120,745,24" Source="/01_MainMenu/Medias/Salary.png" Stretch="Fill" Width="25" Height="25"/>
-        <Image Margin="30,72,745,72" Source="/01_MainMenu/Medias/Company.png" Stretch="Fill" Width="25" Height="25"/>
-        <Image Source="/01_MainMenu/Medias/Contract.png" Stretch="Fill" Width="25" Height="25" Margin="430,72,345,72"/>
-        <Image Source="/01_MainMenu/Medias/Exp.png" Stretch="Fill" Width="25" Height="25" Margin="230,120,545,24"/>
-        <Image Source="/01_MainMenu/Medias/Location.png" Stretch="Fill" Width="25" Height="25" Margin="230,72,545,72"/>
+        <Image Margin="30,120,745,24" Source="/01_MainMenu/Medias/Salary.png" Stretch="Fill" Width="25" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Margin="30,72,745,72" Source="/01_MainMenu/Medias/Company.png" Stretch="Fill" Width="25" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Source="/01_MainMenu/Medias/Contract.png" Stretch="Fill" Width="25" Height="25" Margin="430,72,345,72" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Source="/01_MainMenu/Medias/Exp.png" Stretch="Fill" Width="25" Height="25" Margin="230,120,545,24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Source="/01_MainMenu/Medias/Location.png" Stretch="Fill" Width="25" Height="25" Margin="230,72,545,72" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

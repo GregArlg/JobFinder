@@ -40,6 +40,44 @@ namespace JobFinder._01_MainMenu
 
             MainGrid.BeginAnimation(OpacityProperty, anim);
 
+            InitializeJobsList();
+
+            InitializeComboBoxes();
+        }
+
+        private void InitializeJobsList()
+        {
+            JobsGrid.RowDefinitions.Clear();
+
+            var jobs = Data.GetJobs();
+
+            jobs.ForEach(job =>
+            {
+                //create new row
+                JobsGrid.RowDefinitions.Add(new RowDefinition());
+
+                //instanciate job control
+                var jobCtrl = new JobCtrl(job);
+                //add control to grid
+                JobsGrid.Children.Add(jobCtrl);
+                //map control to row
+                Grid.SetRow(jobCtrl, JobsGrid.RowDefinitions.Count - 1);
+            });
+        }
+
+        private void InitializeComboBoxes()
+        {
+            LocationCB.Items.Clear();
+            LocationCB.ItemsSource = Data.GetLocations();
+
+            SalaryCB.Items.Clear();
+            SalaryCB.ItemsSource = Data.GetSalaries();
+
+            ContractCB.Items.Clear();
+            ContractCB.ItemsSource = Data.GetContracts();
+
+            ExperienceCB.Items.Clear();
+            ExperienceCB.ItemsSource = Data.GetExperiences();
         }
     }
 }

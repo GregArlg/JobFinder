@@ -24,5 +24,17 @@ namespace JobFinder._01_MainMenu
         {
             InitializeComponent();
         }
+
+        public JobCtrl(Job job)
+        {
+            InitializeComponent();
+
+            Title.Content = job.Title;
+            Location.Content = job.Location;
+            Salary.Content = job.Salary;
+            Contract.Content = job.Contract;
+            Experience.Content = job.Experience;
+            Company.Content = job.Company;
+        }
     }
 }
