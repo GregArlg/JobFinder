@@ -112,7 +112,7 @@ namespace JobFinder._01_MainMenu
                 }
                 else
                 {
-                    PlaySound(@"01_MainMenu\Medias\redescend.mp3");
+                    PlaySound(@"01_MainMenu\Medias\redescend.wav");
                 }
                 _toggleContract = !_toggleContract;
             }
