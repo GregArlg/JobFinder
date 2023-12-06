@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +26,8 @@ namespace JobFinder._01_MainMenu
     {
         public MainWindow? ParentWindow { get; set; } = null;
 
+        private string _exeFolderPath;
+
         public MainMenuCtrl()
         {
             InitializeComponent();
@@ -43,6 +48,9 @@ namespace JobFinder._01_MainMenu
             InitializeJobsList();
 
             InitializeComboBoxes();
+
+            string exePath = System.Environment.ProcessPath ?? "";
+            _exeFolderPath = System.IO.Path.GetDirectoryName(exePath) ?? "";
         }
 
         private void InitializeJobsList()
@@ -78,6 +86,46 @@ namespace JobFinder._01_MainMenu
 
             ExperienceCB.Items.Clear();
             ExperienceCB.ItemsSource = Data.GetExperiences();
+        }
+
+        private void PlaySound(string relativeSoundPath)
+        {
+            string soundPath = System.IO.Path.Combine(_exeFolderPath, relativeSoundPath);
+
+            SoundPlayer player = new SoundPlayer(soundPath);
+            player.Load();
+            player.Play();
+
+            player.Dispose();
+        }
+
+        private bool _toggleContract = true;
+        private void ContractCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(ContractCB.SelectedItem.ToString() != "Internship")
+            {
+                ContractCB.SelectedItem = "Internship";
+
+                if (_toggleContract)
+                {
+                    PlaySound(@"01_MainMenu\Medias\calme_toi.wav");
+                }
+                else
+                {
+                    PlaySound(@"01_MainMenu\Medias\redescend.mp3");
+                }
+                _toggleContract = !_toggleContract;
+            }
+        }
+
+        private void SalaryCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            PlaySound(@"01_MainMenu\Medias\coin_sound.wav");
+        }
+
+        private void LocationCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            PlaySound(@"01_MainMenu\Medias\wave.wav");
         }
     }
 }

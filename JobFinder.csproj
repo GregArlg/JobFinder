@@ -11,12 +11,16 @@
     <None Remove="00_Intro\Medias\faux.png" />
     <None Remove="00_Intro\Medias\UE.jpg" />
     <None Remove="01_MainMenu\Medias\black.png" />
+    <None Remove="01_MainMenu\Medias\calme_toi.wav" />
+    <None Remove="01_MainMenu\Medias\coin_sound.wav" />
     <None Remove="01_MainMenu\Medias\Company.png" />
     <None Remove="01_MainMenu\Medias\Contract.png" />
     <None Remove="01_MainMenu\Medias\Exp.png" />
     <None Remove="01_MainMenu\Medias\Location.png" />
+    <None Remove="01_MainMenu\Medias\redescend.mp3" />
     <None Remove="01_MainMenu\Medias\Salary.png" />
     <None Remove="01_MainMenu\Medias\Title.png" />
+    <None Remove="01_MainMenu\Medias\wave.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +31,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="01_MainMenu\Medias\black.png" />
+    <Content Include="01_MainMenu\Medias\calme_toi.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="01_MainMenu\Medias\coin_sound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="01_MainMenu\Medias\redescend.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="01_MainMenu\Medias\wave.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="01_MainMenu\Medias\Company.png" />
     <Resource Include="01_MainMenu\Medias\Contract.png" />
     <Resource Include="01_MainMenu\Medias\Exp.png" />

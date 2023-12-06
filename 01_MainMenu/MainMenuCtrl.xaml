@@ -23,11 +23,11 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <ComboBox x:Name="LocationCB" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="244"/>
+            <ComboBox x:Name="LocationCB" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="244" SelectionChanged="LocationCB_SelectionChanged"/>
             <Label Content="Location:" HorizontalAlignment="Left" Margin="118,116,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
-            <ComboBox x:Name="SalaryCB" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="244"/>
+            <ComboBox x:Name="SalaryCB" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="244" SelectionChanged="SalaryCB_SelectionChanged"/>
             <Label Content="Salary:" HorizontalAlignment="Left" Margin="118,266,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
-            <ComboBox x:Name="ContractCB" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" Width="244"/>
+            <ComboBox x:Name="ContractCB" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" Width="244" SelectionChanged="ContractCB_SelectionChanged"/>
             <Label Content="Contract:" HorizontalAlignment="Left" Margin="118,416,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
             <ComboBox x:Name="ExperienceCB" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Top" Width="244"/>
             <Label Content="Experience" HorizontalAlignment="Left" Margin="118,566,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>

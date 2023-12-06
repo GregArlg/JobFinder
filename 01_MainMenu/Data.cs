@@ -12,6 +12,25 @@ namespace JobFinder._01_MainMenu
         {
             return new List<string>
             {
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
+                "Sydney",
                 "Sydney"
             };
         }
