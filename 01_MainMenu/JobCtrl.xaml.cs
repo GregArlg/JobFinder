@@ -20,21 +20,32 @@ namespace JobFinder._01_MainMenu
     /// </summary>
     public partial class JobCtrl : UserControl
     {
+        private Job _job;
+
         public JobCtrl()
         {
             InitializeComponent();
+
+            _job = new Job();
         }
 
         public JobCtrl(Job job)
         {
             InitializeComponent();
 
-            Title.Content = job.Title;
-            Location.Content = job.Location;
-            Salary.Content = job.Salary;
-            Contract.Content = job.Contract;
-            Experience.Content = job.Experience;
-            Company.Content = job.Company;
+            _job = job;
+
+            Title.Content = _job.Title;
+            Location.Content = _job.Location;
+            Salary.Content = _job.Salary;
+            Contract.Content = _job.Contract;
+            Experience.Content = _job.Experience;
+            Company.Content = _job.Company;
+        }
+
+        private void Title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            _job.OpenLink();
         }
     }
 }

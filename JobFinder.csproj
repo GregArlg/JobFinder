@@ -12,10 +12,12 @@
     <None Remove="00_Intro\Medias\UE.jpg" />
     <None Remove="01_MainMenu\Medias\black.png" />
     <None Remove="01_MainMenu\Medias\calme_toi.wav" />
+    <None Remove="01_MainMenu\Medias\chacun_a_sa_place.wav" />
     <None Remove="01_MainMenu\Medias\coin_sound.wav" />
     <None Remove="01_MainMenu\Medias\Company.png" />
     <None Remove="01_MainMenu\Medias\Contract.png" />
     <None Remove="01_MainMenu\Medias\Exp.png" />
+    <None Remove="01_MainMenu\Medias\fb.png" />
     <None Remove="01_MainMenu\Medias\Location.png" />
     <None Remove="01_MainMenu\Medias\redescend.mp3" />
     <None Remove="01_MainMenu\Medias\redescend.wav" />
@@ -35,7 +37,13 @@
     <Content Include="01_MainMenu\Medias\calme_toi.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="01_MainMenu\Medias\chacun_a_sa_place.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="01_MainMenu\Medias\coin_sound.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="01_MainMenu\Medias\fb.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="01_MainMenu\Medias\redescend.wav">
