@@ -15,6 +15,7 @@ namespace JobFinder._01_MainMenu
         public string Contract { get; set; } = "";
         public string Salary { get; set; } = "";
         public string Experience { get; set; } = "";
+        public string LogoPath { get; set; } = "";
 
         public string Link { get; set; } = "";
 
@@ -22,13 +23,28 @@ namespace JobFinder._01_MainMenu
 
         public void OpenLink()
         {
-            //System.Diagnostics.Process.Start(Link);
-
-            System.Diagnostics.Process.Start(new ProcessStartInfo
+            if (!string.IsNullOrWhiteSpace(Link))
             {
-                FileName = Link,
-                UseShellExecute = true
-            });
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = Link,
+                    UseShellExecute = true
+                }); 
+            }
+        }
+
+        public void OpenLink(string link)
+        {
+            if (!string.IsNullOrWhiteSpace(link))
+            {
+                Link = link;
+
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = Link,
+                    UseShellExecute = true
+                });
+            }
         }
     }
 }

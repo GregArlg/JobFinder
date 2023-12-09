@@ -41,11 +41,24 @@ namespace JobFinder._01_MainMenu
             Contract.Content = _job.Contract;
             Experience.Content = _job.Experience;
             Company.Content = _job.Company;
+            Logo.Source = new BitmapImage(new Uri(_job.LogoPath, UriKind.Relative));
         }
 
         private void Title_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            _job.OpenLink();
+            //if job link not assigned, assign and open,
+            //else just open
+
+            if (string.IsNullOrWhiteSpace(_job.Link))
+            {
+                string link = Data.GetCurrentLink();
+
+                _job.OpenLink(link); 
+            }
+            else
+            {
+                _job.OpenLink();
+            }
         }
     }
 }

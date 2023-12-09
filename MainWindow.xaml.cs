@@ -26,7 +26,7 @@ namespace JobFinder
         {
             InitializeComponent();
 
-            Run00();
+            Run01();
         }
 
         public void Run00()

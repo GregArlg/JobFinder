@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Media;
@@ -25,6 +26,11 @@ namespace JobFinder._01_MainMenu
     public partial class MainMenuCtrl : UserControl
     {
         public MainWindow? ParentWindow { get; set; } = null;
+
+        public ObservableCollection<string> Locations { get; set; } = new ObservableCollection<string>();
+        public ObservableCollection<string> Salaries { get; set; } = new ObservableCollection<string>();
+        public ObservableCollection<string> Contracts { get; set; } = new ObservableCollection<string>();
+        public ObservableCollection<string> Experiences { get; set; } = new ObservableCollection<string>();
 
         private string _exeFolderPath;
 
@@ -75,17 +81,21 @@ namespace JobFinder._01_MainMenu
 
         private void InitializeComboBoxes()
         {
-            LocationCB.Items.Clear();
-            LocationCB.ItemsSource = Data.GetLocations();
+            LocationCB.DataContext = this;
+            Locations = Data.GetLocations();
+            LocationCB.ItemsSource = Locations;
 
-            SalaryCB.Items.Clear();
-            SalaryCB.ItemsSource = Data.GetSalaries();
+            SalaryCB.DataContext = this;
+            Salaries = Data.GetSalaries();
+            SalaryCB.ItemsSource = Salaries;
 
-            ContractCB.Items.Clear();
-            ContractCB.ItemsSource = Data.GetContracts();
+            ContractCB.DataContext = this;
+            Contracts = Data.GetContracts();
+            ContractCB.ItemsSource = Contracts;
 
-            ExperienceCB.Items.Clear();
-            ExperienceCB.ItemsSource = Data.GetExperiences();
+            ExperienceCB.DataContext = this;
+            Experiences = Data.GetExperiences();
+            ExperienceCB.ItemsSource = Experiences;
         }
 
         private void PlaySound(string relativeSoundPath)
@@ -102,19 +112,22 @@ namespace JobFinder._01_MainMenu
         private bool _toggleContract = true;
         private void ContractCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(ContractCB.SelectedItem.ToString() != "Internship")
+            if (!Data.AllLinksOpened)
             {
-                ContractCB.SelectedItem = "Internship";
+                if (ContractCB.SelectedItem.ToString() != "Internship")
+                {
+                    ContractCB.SelectedItem = "Internship";
 
-                if (_toggleContract)
-                {
-                    PlaySound(@"01_MainMenu\Medias\calme_toi.wav");
-                }
-                else
-                {
-                    PlaySound(@"01_MainMenu\Medias\redescend.wav");
-                }
-                _toggleContract = !_toggleContract;
+                    if (_toggleContract)
+                    {
+                        PlaySound(@"01_MainMenu\Medias\calme_toi.wav");
+                    }
+                    else
+                    {
+                        PlaySound(@"01_MainMenu\Medias\redescend.wav");
+                    }
+                    _toggleContract = !_toggleContract;
+                } 
             }
         }
 
@@ -127,5 +140,60 @@ namespace JobFinder._01_MainMenu
         {
             PlaySound(@"01_MainMenu\Medias\wave.wav");
         }
+
+        private bool _onceOnly = true;
+
+        private void RiddleBtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Data.AllLinksOpened)
+            {
+                if (_onceOnly)
+                {
+                    //on the first time we click on the img
+                    //we add elements to comboboxes
+                    //and show the message
+
+                    _onceOnly = false;
+
+                    List<string> content = new List<string>();
+
+                    Locations.Insert(150, "Manly");
+
+                    Salaries.Insert(8, "100k+");
+
+                    Contracts.Add("Full Time Hybrid");
+
+                    Experiences.Add("NOT JUNIOR");
+
+                    MessageBox.Show(
+                        "let's take it from the start.\nPrecise your search.",
+                        "What now?", MessageBoxButton.OK, MessageBoxImage.Question);
+                }
+                else
+                {
+                    //if it is not the first time we click on the image
+                    //and all wanted values are selected
+
+                    if (
+                    (string)LocationCB.SelectedItem == "Manly" &&
+                    (string)SalaryCB.SelectedItem == "100k+" &&
+                    (string)ContractCB.SelectedItem == "Full Time Hybrid" &&
+                    (string)ExperienceCB.SelectedItem == "NOT JUNIOR")
+                    {
+                        //open slideshow !
+                        bool debug = true;
+                    }
+                    else
+                    {
+                        //else show message again
+                        MessageBox.Show(
+                            "let's take it from the start.\nPrecise your search.",
+                            "What now?", MessageBoxButton.OK, MessageBoxImage.Question);
+                    }
+                }
+            }
+
+        }
+        
     }
 }

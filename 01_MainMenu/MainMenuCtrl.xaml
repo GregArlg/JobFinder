@@ -1,9 +1,10 @@
-﻿<UserControl x:Class="JobFinder._01_MainMenu.MainMenuCtrl"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JobFinder._01_MainMenu"
+             xmlns:JobFinder="clr-namespace:JobFinder" x:Class="JobFinder._01_MainMenu.MainMenuCtrl"
              mc:Ignorable="d" d:DesignWidth="1920" Background="Black" d:DesignHeight="1080">
     <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
@@ -17,13 +18,19 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Image x:Name="TitleImg" Grid.Column="1" Source="/01_MainMenu/Medias/Title.png" Stretch="Fill"/>
+            <Rectangle x:Name="RiddleBtn" Grid.Column="1" Margin="178,41,945,64" Stroke="Black" MouseLeftButtonDown="RiddleBtn_MouseLeftButtonDown">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="Black" Opacity="0.01"/>
+                </Rectangle.Fill>
+            </Rectangle>
         </Grid>
         <Grid x:Name="ContentGrid" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <ComboBox x:Name="LocationCB" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="244" SelectionChanged="LocationCB_SelectionChanged"/>
+            <ComboBox x:Name="LocationCB" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="244" SelectionChanged="LocationCB_SelectionChanged" MaxDropDownHeight="80">
+            </ComboBox>
             <Label Content="Location:" HorizontalAlignment="Left" Margin="118,116,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
             <ComboBox x:Name="SalaryCB" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="244" SelectionChanged="SalaryCB_SelectionChanged"/>
             <Label Content="Salary:" HorizontalAlignment="Left" Margin="118,266,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>

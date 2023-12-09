@@ -31,5 +31,6 @@
         <Image Source="/01_MainMenu/Medias/Contract.png" Stretch="Fill" Width="25" Height="25" Margin="430,72,345,72" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Image Source="/01_MainMenu/Medias/Exp.png" Stretch="Fill" Width="25" Height="25" Margin="230,120,545,24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Image Source="/01_MainMenu/Medias/Location.png" Stretch="Fill" Width="25" Height="25" Margin="230,72,545,72" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="Logo" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,50,0" Width="70" Height="70"/>
     </Grid>
 </UserControl>
